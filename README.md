@@ -41,11 +41,19 @@ On the [Azure Cloud Shell](https://shell.azure.com/) run the following commands 
 
 4. Deploy solution
     ```bash
-    cd PatientMonitoringDemo
+    cd ADXIoTAnalytics
     . ./deploy.sh
     ```
 
-5. Finally, download the [Power BI report](/assets/Connected_Devices.pbix), update the data source to point to yoir newly deployed Azure Data Explorer database, and refresh the data in the report.
+5. Go to Resource Groups, and find new RG *ADXIoTAnalytics[random number]* with deployed resources in East US.
+  - ADX Cluster: adxpm[random number]
+  - Event Grid System Topic: BlobCreate
+  - Digital Twins: digitaltwinpm[random number]
+  - Event Hubs Namespace: eventhubpm[random number]
+  - IoT Central Application: iotcentralpm[random number]
+  - Storage Account: iotmonitoringsa[random number]
+
+6. Finally, download the [Power BI report](/assets/Connected_Devices.pbix), update the data source to point to yoir newly deployed Azure Data Explorer database, and refresh the data in the report.
 
 ## Files used in the solution
 
