@@ -197,7 +197,7 @@ function deploy_thermostat_devices() {
     else
         iotCentralTemplate='dtmi:ltifbs50b:mecybcwqm'
     fi
-    for (( c=1; c<=$numDevices; c++ ))
+    for (( c=1; c <= $numDevices; c++ ))
     do 
         deviceId=$(cat /proc/sys/kernel/random/uuid)
         az iot central device create --device-id $deviceId --app-id $iotCentralAppID \
